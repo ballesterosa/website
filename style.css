@@ -2465,7 +2465,7 @@ video {
 } */
 
 .img-silhouette {
-  padding: 0.20rem;
+  padding: 2.0rem;
   background-color: #18dde7;
   position: relative;
   top: -0.7rem;
@@ -2485,36 +2485,6 @@ video {
   transform-origin: 70% 70%;
   display: inline-block;
   margin-right: 0.5em;
-}
-
-@keyframes handwave {
-  0% {
-    transform: rotate(0.0deg)
-  }
-
-  10% {
-    transform: rotate(-10.0deg)
-  }
-
-  20% {
-    transform: rotate(12.0deg)
-  }
-
-  30% {
-    transform: rotate(-10.0deg)
-  }
-
-  40% {
-    transform: rotate(9.0deg)
-  }
-
-  50% {
-    transform: rotate(0.0deg)
-  }
-
-  100% {
-    transform: rotate(0.0deg)
-  }
 }
 
 @media (min-width: 640px) {
