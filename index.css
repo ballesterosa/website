@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.link {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+    text-decoration-color: #00b7eb;
+}
+
+.link.link-muted {
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-decoration-color: currentColor;
+}
+
+.enable-colored-links {
+    .link-uw {
+        text-decoration-color: #4A2E83;
+    }
+
+    .link-black {
+        text-decoration-color: #000;
+    }
+
+    .link-red {
+        text-decoration-color: #f01b1a;
+    }
+
+    .link-blue {
+        text-decoration-color: #1a2ff0;
+    }
+
+    .link-green {
+        text-decoration-color: #01d117;
+    }
+
+    .link-matt {
+        text-decoration-color: #e95420;
+    }
+
+}
+
+.img-silhouette {
+    padding: 0.20rem;
+    background-color: #00b7eb;
+    position: relative;
+    top: -0.7rem;
+    left: -0.7rem;
+}
+
+.img-silhouette-shift {
+    position: relative;
+    top: 0.7rem;
+    left: 0.7rem;
+}

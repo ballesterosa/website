@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>antonio Ballesteros</title>
+  <meta name="theme-color" content="#e95420">
+  <link href="./style.css" rel="stylesheet" />
+</head>
+<body class="bg-slate-50 dark:bg-zinc-900 dark:text-slate-50 px-8">
+  <main class="md:mt-32 my-8">
+    <section class="max-w-6xl mx-auto py-4">
+      <div class="md:grid md:grid-cols-4 md:gap-4">
+        <div>
+          <div class="img-silhouette rounded max-w-sm m-auto mb-8">
+            <img class="d-block w-full rounded img-silhouette-shift" src="img/me_with_dubs.jpeg" alt="Antonio crouched down next to Dubs, the University of Washington husky mascot." />
+          </div>
+        </div>
+        <div class="md:col-span-3 max-w-prose px-4 mb-8">
+          <h1 class="mb-2"><span class="text-3xl font-semibold">antonio ballesteros </span>(he/him)</h1>
+          <p class="my-2">
+            <a class="link link-green" href="mailto:antonio6@cs.washington.edu"><code>antonio6@cs.washington.edu</code></a> |
+            <a class="link link-red" href="https://github.com/ballesterosa"><code>github.com/ballesterosa</code></a>
+          </p>
+          <p class="my-2">I have only done so much in the short time that I have been here, but here's a short summary.</p>
+          <p class="my-2">I'm from the state of Washington, born and raised as they say. 
+          Currently, I'm an Undergraduate Computer Science student in the
+          <a class="link link-blue" href="https://www.cs.washington.edu">Paul G. Allen School of Computer Science & Engineering</a> at the
+                <a class="link link-uw" href="https://www.uw.edu">University of Washington</a>. 
+          I'm a sophomore based on my years spent at the university <span>&#40;</span>ignoring the fact that I'm almost a senior by credits<span>&#41;</span>.
+          Being that I'm new to Computer Science, I am not very experienced, but I will more than make up for it with my eagerness to learn and improve.
+          </p>
+          <p class="my-2">I'm bilingual, aka I can speak, read, and write in English and Spanish. 
+          I enjoy many things, including, but not limited to, reading, watching movies or TV shows, playing games with friends, and spending time with family.
+          If you see me around, feel free to say hello, sometimes I can be a little introverted, but for the most part, I enjoy meeting new people.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <hr class="max-w-prose mx-auto" />
+  <footer class="max-w-prose mx-auto my-8">
+    <p>inspired by my professor matt's <a class="link link-matt" href="https://matthewwang.me/">website</a> &#128526;</p>
+    <p class="my-4 text-sm">
+      <a class="link link-black" href="https://github.com/ballesterosa/Personal-Website">view source code</a>
+      | <button class="link link-muted" id="toggle-link-colors">click for bright rainbow mode</button>
+    </p>
+  </footer>
+  <script>
+    window.onload = () => {
+      const anchorLinks = Array.from(document.querySelectorAll('a').values()).map(anchor => anchor.href)
+
+      document.getElementById('toggle-link-colors').addEventListener('click', () => {
+        document.querySelector('body').classList.toggle('enable-colored-links');
+        document.querySelector('body').classList.toggle('dark:bg-zinc-900');
+        document.querySelector('body').classList.toggle('dark:text-slate-50');
+      });
+
+    }
+  </script>
+</body>
+</html>
