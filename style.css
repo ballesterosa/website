@@ -2017,6 +2017,11 @@ video {
   vertical-align: super;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2469,6 +2474,9 @@ video {
   }
   .link-matt {
     text-decoration-color: #e95420;
+  }
+  .link-yellow {
+    text-decoration-color: #ffed27;
   }
 }
 
