@@ -28,7 +28,7 @@
           Currently, I'm an Undergraduate Computer Science student in the
           <a class="link link-blue" href="https://www.cs.washington.edu">Paul G. Allen School of Computer Science & Engineering</a> at the
                 <a class="link link-uw" href="https://www.uw.edu">University of Washington</a>. 
-          I'm a sophomore based on my years spent at the university <span>&#40;</span>ignoring the fact that I'm almost a senior by credits<span>&#41;</span>.
+          I'm a sophomore based on my years spent at the university <span>&#40;</span>ignoring the fact that I'm a senior by credits<span>&#41;</span>.
           Being that I'm new to Computer Science, I am not very experienced, but I will more than make up for it with my eagerness to learn and improve.
           </p>
           <p class="my-2">I'm bilingual, aka I can speak, read, and write in English and Spanish. 
@@ -44,11 +44,26 @@
     <p>inspired by my professor matt's <a class="link link-matt" href="https://matthewwang.me/">website</a> &#128526;</p>
     <p class="my-4 text-sm">
       <a class="link link-black" href="https://github.com/ballesterosa/website">view source code</a>
-      | <button class="link link-muted" id="toggle-link-colors">click for bright rainbow mode</button>
+      | <button class="link link-muted" id="toggle-link-colors">bright or dark button</button>
     </p>
   </footer>
+  <script type="module" src="./node_modules/suncalc/suncalc.js">
+    var SunCalc = new suncalc();
+  </script>
   <script>
     window.onload = () => {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          var curr_time = new Date();
+          var times = SunCalc.getTimes(curr_time, position.coords.latitude, position.coords.longitude);
+          if (curr_time > times.sunrise && curr_time < times.sunset) {
+            document.querySelector('body').classList.toggle('enable-colored-links');
+            document.querySelector('body').classList.toggle('dark:bg-zinc-900');
+            document.querySelector('body').classList.toggle('dark:text-slate-50');
+          }
+        });
+      }
+
       const anchorLinks = Array.from(document.querySelectorAll('a').values()).map(anchor => anchor.href)
 
       document.getElementById('toggle-link-colors').addEventListener('click', () => {
